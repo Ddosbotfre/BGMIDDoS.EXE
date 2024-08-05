@@ -4,10 +4,10 @@ import logging
 from aiogram import Bot
 import asyncio
 
-API_TOKEN = '7262217536:AAHX6ROfNRk1ZH9ZcwokcwvyR4jFtk3fKP8'
-ADMIN_ID = '1065510487'
-MAX_RESTARTS = 5
-RESTART_PERIOD = 60  # Seconds
+API_TOKEN = '7317201851:AAFYCuih2YlfSu6WUsSxM9vYLjoUQ6b1E0Q'
+ADMIN_ID = '1812281161'
+MAX_RESTARTS = 100
+RESTART_PERIOD = 10  # Seconds
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 bot = Bot(API_TOKEN)
@@ -42,7 +42,7 @@ async def main():
 
         logging.info("Starting the bot...")
         process = start_bot()
-        await notify_admin("🚀 Bot is starting...")
+        await notify_admin("Bhadwagiri Chalu Bhenchod.....")
 
         while process.poll() is None:
             await asyncio.sleep(5)
