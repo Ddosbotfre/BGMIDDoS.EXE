@@ -16,6 +16,8 @@ admin_id = ["1812281161"]
 # File to store allowed user IDs
 USER_FILE = "users.txt"
 
+FREE_USER_FILE = "freeusers.txt"
+
 # File to store command logs
 LOG_FILE = "log.txt"
 
