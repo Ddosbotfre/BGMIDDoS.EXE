@@ -1,4 +1,5 @@
 telebot
 Flask
 aiogram
+gevent
 pip install -r requirement.txt
