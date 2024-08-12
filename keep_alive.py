@@ -8,9 +8,8 @@ def index():
     return "SpikeSpiegel"
 
 def run():
-    app.run( http_server = WSGIServer(('', 5000), app)
+    http_server = WSGIServer(('', 5000), app)
     http_server.serve_forever()
-           )
 
 def keep_alive():
     t = Thread(target=run)
