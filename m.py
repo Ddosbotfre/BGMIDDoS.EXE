@@ -25,6 +25,22 @@ def read_users():
         with open(USER_FILE, "r") as file:
             return file.read().splitlines()
     except FileNotFoundError:
+        return []
+
+# Function to read free user IDs and their credits from the file
+def read_free_users():
+    try:
+        with open(FREE_USER_FILE, "r") as file:
+            lines = file.read().splitlines()
+            for line in lines:
+                if line.strip():  # Check if line is not empty
+                    user_info = line.split()
+                    if len(user_info) == 2:
+                        user_id, credits = user_info
+                        free_user_credits[user_id] = int(credits)
+                    else:
+                        print(f"Ignoring invalid line in free user file: {line}")
+    except FileNotFoundError:
         pass
 
 # List to store allowed user IDs
